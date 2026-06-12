@@ -1,0 +1,7 @@
+a=list(map(int, input("Enter values: ").split()))
+b=tuple(a)
+print("Tuple: ",b)
+c=set(a)
+print("set: ",c)
+c=list(c)
+print("set indexing: ", c[4])
