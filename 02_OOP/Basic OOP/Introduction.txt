@@ -1,0 +1,25 @@
+Class : 1. A class is a blueprint used to create and manage objects. 
+        2. It defines the attributes (data) and methods (behavior) that objects will have.
+
+Real-Life Example
+
+Think of a class as an architectural blueprint
+
+Blueprint (Class):
+
+--> House
+    - color
+    - rooms
+    - address
+
+Actual Houses (Objects):
+
+--> House 1:
+        color = White
+        rooms = 3
+
+    House 2:
+        color = Blue
+        rooms = 5
+
+One blueprint can create many houses.
