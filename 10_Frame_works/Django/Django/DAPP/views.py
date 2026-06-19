@@ -104,3 +104,36 @@ def create_student(request):
             "errors": serializer.errors
         }
     )
+
+
+@api_view(["PUT"])
+def update_student(request, id):
+
+    student = Student.objects.get(id=id)
+
+    serializer = StudentSerializer(
+        student,
+        data=request.data
+    )
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+
+    return Response(serializer.errors)
+
+
+
+
+@api_view(["DELETE"])
+def delete_student(request, id):
+
+    student = Student.objects.get(id=id)
+
+    student.delete()
+
+    return Response(
+        {
+            "Message": "Student deleted successfully"
+        }
+    )
