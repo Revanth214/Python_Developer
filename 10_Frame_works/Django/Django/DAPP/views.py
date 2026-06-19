@@ -74,3 +74,33 @@ def student_list(request):
 # JSON
 #    ↓
 # Client
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from .serializers import StudentSerializer
+
+
+@api_view(["POST"])
+def create_student(request):
+
+    serializer = StudentSerializer(
+        data=request.data
+    )
+
+    if serializer.is_valid():
+
+        serializer.save()
+
+        return Response(
+            {
+                "message": "Student created successfully",
+                "data": serializer.data
+            }
+        )
+
+    return Response(
+        {
+            "errors": serializer.errors
+        }
+    )
