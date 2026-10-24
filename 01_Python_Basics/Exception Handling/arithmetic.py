@@ -10,7 +10,7 @@ except ZeroDivisionError:
     print("Can't divide by Zero")
 
 else:
-    print("Division completedwithout error")  # Runs only if no exception occurs
+    print("Division completed without error")  # Runs only if no exception occurs
 
 finally:
     print("Program finished") # Runs whether an exception occurs or not

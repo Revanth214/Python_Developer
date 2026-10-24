@@ -7,7 +7,6 @@ def factorial_iterative(n):
         result *= i
     return result
 
-
 def factorial_recursive(n):
     """Return n! using recursion."""
     if n < 0:

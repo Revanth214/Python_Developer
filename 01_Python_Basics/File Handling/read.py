@@ -1,4 +1,6 @@
-with open('employees.txt', 'r') as file:
+import os
+print(os.getcwdb())
+with open("employees.txt", "r") as file:
     content=file.read() # Method 1: Read entire file
 
 print(content)
